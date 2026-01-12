@@ -1,0 +1,106 @@
+<div class="container mt-4">
+  <h1>Product Management</h1>
+  <p>Manage your products efficiently.</p>
+
+  <!-- Add Product Button -->
+  <button class="btn btn-success mb-3" (click)="openAddProductDialog(addProductDialog)">
+    <i class="fas fa-plus"></i> Add Product
+  </button>
+
+  <!-- Search -->
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Search</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search products">
+  </mat-form-field>
+
+  <!-- Table for large screens -->
+  <div *ngIf="!isSmallScreen">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
+
+      <!-- Columns -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let product">{{ product.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let product">{{ product.name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="sku">
+        <th mat-header-cell *matHeaderCellDef>SKU</th>
+        <td mat-cell *matCellDef="let product">{{ product.sku }}</td>
+      </ng-container>
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>Category</th>
+        <td mat-cell *matCellDef="let product">{{ product.category }}</td>
+      </ng-container>
+      <ng-container matColumnDef="stock">
+        <th mat-header-cell *matHeaderCellDef>Stock</th>
+        <td mat-cell *matCellDef="let product">{{ product.stock }}</td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let product">
+          <button class="btn btn-primary btn-sm me-2" (click)="editProduct(product)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteProduct(product)">Delete</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]" showFirstLastButtons></mat-paginator>
+  </div>
+
+  <!-- List for small screens -->
+  <div *ngIf="isSmallScreen">
+    <div *ngFor="let product of dataSource.filteredData" class="card mb-2">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }} <span class="badge bg-secondary">{{ product.category }}</span></h5>
+        <p class="card-text mb-1"><strong>ID:</strong> {{ product.id }}</p>
+        <p class="card-text mb-1"><strong>SKU:</strong> {{ product.sku }}</p>
+        <p class="card-text mb-1"><strong>Stock:</strong> {{ product.stock }}</p>
+        <button class="btn btn-primary btn-sm me-2" (click)="editProduct(product)">Edit</button>
+        <button class="btn btn-danger btn-sm" (click)="deleteProduct(product)">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add/Edit Product Dialog Template -->
+  <ng-template #addProductDialog let-dialogRef="dialogRef">
+    <div class="card">
+      <div class="card-body">
+        <mat-card>
+          <form #productForm="ngForm">
+            <mat-card-header>
+              <mat-card-title>{{ editingProduct ? 'Edit Product' : 'Add Product' }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-form-field style="width: 100%;">
+                <mat-label>Name</mat-label>
+                <input matInput name="name" [(ngModel)]="productData.name" required>
+              </mat-form-field>
+              <mat-form-field style="width: 100%;">
+                <mat-label>SKU</mat-label>
+                <input matInput name="sku" [(ngModel)]="productData.sku" required>
+              </mat-form-field>
+              <mat-form-field style="width: 100%;">
+                <mat-label>Category</mat-label>
+                <input matInput name="category" [(ngModel)]="productData.category" required>
+              </mat-form-field>
+              <mat-form-field style="width: 100%;">
+                <mat-label>Stock</mat-label>
+                <input matInput type="number" name="stock" [(ngModel)]="productData.stock" required>
+              </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" [disabled]="!productForm.valid"
+                (click)="saveProduct(dialogRef)"> <mat-icon>save</mat-icon> Save</button>
+              <button mat-button (click)="dialogRef.close()">Cancel</button>
+            </mat-card-actions>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </ng-template>
+</div>

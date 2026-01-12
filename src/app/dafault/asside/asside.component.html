@@ -1,0 +1,112 @@
+<div class="d-flex" style="height: 100vh;">
+  <!-- Sidebar -->
+  <aside 
+    class="flex-shrink-0 p-0 sidebar"
+    [class.d-none]="!sidebarOpen"
+    style="width: 250px; background-color: #8B5C2A;"
+  >
+    <div class="sidebar-header p-3 border-bottom bg-primary">
+      <h4 class="mb-0 text-white"><i class="fas fa-user-shield me-2"></i>Admin Panel</h4>
+    </div>
+    <ul class="nav flex-column mt-3">
+      <!-- ...existing nav items... -->
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['users']">
+          <i class="fas fa-users me-2"></i> Users
+        </a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['inventory']">
+          <i class="fas fa-boxes-stacked me-2"></i> Inventory
+        </a>
+      </li> -->
+      <!-- <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['accounting']">
+          <i class="fas fa-file-invoice-dollar me-2"></i> Accounting
+        </a>
+      </li> -->
+        <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['categories']">
+          <i class="fas fa-cogs me-2"></i> Category
+        </a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['product-management']">
+          <i class="fas fa-cogs me-2"></i> Product
+        </a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['sales']">
+          <i class="fas fa-cogs me-2"></i> Seles
+        </a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['purchases']">
+          <i class="fas fa-cogs me-2"></i> Purchases
+        </a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['customers']">
+          <i class="fas fa-cogs me-2"></i> Customers
+        </a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['suppliers']">
+          <i class="fas fa-cogs me-2"></i> Suppliers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-cogs me-2"></i> Settings
+        </a>
+      </li>
+      <!-- Dropdown for Pages -->
+      <li class="nav-item dropdown">
+        <a class="nav-link text-white dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-copy me-2"></i> Pages
+        </a>
+        <ul class="dropdown-menu bg-primary border-0" aria-labelledby="pagesDropdown">
+          <li>
+            <a class="dropdown-item text-white" href="#"><i class="fas fa-sign-in-alt me-2"></i> Page1</a>
+          </li>
+          <li>
+            <a class="dropdown-item text-white" href="#"><i class="fas fa-user-plus me-2"></i> Page2</a>
+          </li>
+          <li>
+            <a class="dropdown-item text-white" href="#"><i class="fas fa-exclamation-triangle me-2"></i> Page3</a>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content Area -->
+  <div class="flex-grow-1 d-flex flex-column">
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand navbar-light bg-light border-bottom">
+      <div class="container-fluid">
+        <button class="btn btn-primary d-lg-none me-2" (click)="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a class="navbar-brand d-none d-lg-inline" href="#" (click)="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+        </a>
+        <div class="ms-auto">
+          <span class="navbar-text me-3">Welcome, Admin</span>
+          <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+        
+      </div>
+    </nav>
+    <!-- Page Content -->
+    <main class="flex-grow-1 p-4 bg-light">
+        <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
