@@ -1,0 +1,8 @@
+<input type="text" placeholder="Product Name" [(ngModel)]="productName">
+<input type="text" placeholder="Product ID" [(ngModel)]="productId">
+<input type="number" placeholder="Price" [(ngModel)]="price">
+
+<qrcode
+  [qrdata]="qrData"
+  [width]="200">
+</qrcode>

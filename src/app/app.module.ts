@@ -33,6 +33,8 @@ import { CustomersComponent } from './pages/customers/customers.component';
 import { SuppliersComponent } from './pages/suppliers/suppliers.component';
 import { PurchasesComponent } from './pages/purchases/purchases.component';
 import { DevComponent } from './pages/dev/dev.component';
+import { AddproductComponent } from './pages/addproduct/addproduct.component';
+import { QRCodeModule } from 'angularx-qrcode';
 // import { AddproductComponent } from './pages/addproduct/addproduct.component';
 
 // import { SidenavComponent } from './sidenav/sidenav.component';
@@ -56,6 +58,7 @@ import { DevComponent } from './pages/dev/dev.component';
     SuppliersComponent,
     PurchasesComponent,
     DevComponent,
+    AddproductComponent,
     // AddproductComponent,
 
 
@@ -78,7 +81,8 @@ import { DevComponent } from './pages/dev/dev.component';
       MatIconModule,
       MatDatepickerModule,
       MatNativeDateModule,
-       HttpClientModule
+       HttpClientModule,
+       QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
