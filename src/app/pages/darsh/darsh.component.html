@@ -1,2 +1,16 @@
- <h2>Dashboard</h2>
-<p>Welcome to the Admin Panel!</p>
+
+<div class="dashboard-cards">
+  <div class="card" *ngFor="let c of cards">
+    <div class="card-header">
+      <mat-icon>{{ c.icon }}</mat-icon>    <!-- or <i class="fa fa-dollar-sign"> -->
+      <div class="card-value">{{ c.value }}</div>
+    </div>
+    <div class="card-label">{{ c.label }}</div>
+    <!-- <div class="card-progress">
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="c.progress"></div>
+      </div>
+      <div class="progress-text">{{ c.footer }}</div>
+    </div> -->
+  </div>
+</div>

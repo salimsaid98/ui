@@ -1,22 +1,22 @@
-<div class="d-flex" style="height: 100vh;">
+<div class="d-flex" style="height: 100vh; border: 1px solid black;">
   <!-- Sidebar -->
-  <aside 
+  <aside
     class="flex-shrink-0 p-0 sidebar"
     [class.d-none]="!sidebarOpen"
-    style="width: 250px; background-color: #8B5C2A;"
+    style="width: 250px; background-color:white; border-right: 1px solid gainsboro;"
   >
-    <div class="sidebar-header p-3 border-bottom bg-primary">
-      <h4 class="mb-0 text-white"><i class="fas fa-user-shield me-2"></i>Admin Panel</h4>
+    <div class="sidebar-header p-3 border-bottom">
+      <h4 class="mb-0 text-black"><i class="fas fa-user-shield me-2"></i>ADMIN PANEL</h4>
     </div>
     <ul class="nav flex-column mt-3">
       <!-- ...existing nav items... -->
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">
+        <a class="nav-link text-black" href="#">
           <i class="fas fa-tachometer-alt me-2"></i> Dashboard
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" [routerLink]="['users']">
+        <a class="nav-link text-black" [routerLink]="['users']">
           <i class="fas fa-users me-2"></i> Users
         </a>
       </li>
@@ -31,54 +31,54 @@
         </a>
       </li> -->
         <li class="nav-item">
-        <a class="nav-link text-white" [routerLink]="['categories']">
+        <a class="nav-link text-black" [routerLink]="['categories']">
           <i class="fas fa-cogs me-2"></i> Category
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link text-white" [routerLink]="['product-management']">
+        <a class="nav-link text-black" [routerLink]="['product-management']">
           <i class="fas fa-cogs me-2"></i> Product
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link text-white" [routerLink]="['sales']">
+        <a class="nav-link text-black" [routerLink]="['sales']">
           <i class="fas fa-cogs me-2"></i> Seles
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link text-white" [routerLink]="['purchases']">
+        <a class="nav-link text-black" [routerLink]="['purchases']">
           <i class="fas fa-cogs me-2"></i> Purchases
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link text-white" [routerLink]="['customers']">
+        <a class="nav-link text-black" [routerLink]="['customers']">
           <i class="fas fa-cogs me-2"></i> Customers
         </a>
       </li>
         <li class="nav-item">
-        <a class="nav-link text-white" [routerLink]="['suppliers']">
+        <a class="nav-link text-black" [routerLink]="['suppliers']">
           <i class="fas fa-cogs me-2"></i> Suppliers
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">
+        <a class="nav-link text-black" href="#">
           <i class="fas fa-cogs me-2"></i> Settings
         </a>
       </li>
       <!-- Dropdown for Pages -->
       <li class="nav-item dropdown">
-        <a class="nav-link text-white dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link text-black dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-copy me-2"></i> Pages
         </a>
         <ul class="dropdown-menu bg-primary border-0" aria-labelledby="pagesDropdown">
           <li>
-            <a class="dropdown-item text-white" href="#"><i class="fas fa-sign-in-alt me-2"></i> Page1</a>
+            <a class="dropdown-item text-black" href="#"><i class="fas fa-sign-in-alt me-2"></i> Page1</a>
           </li>
           <li>
-            <a class="dropdown-item text-white" href="#"><i class="fas fa-user-plus me-2"></i> Page2</a>
+            <a class="dropdown-item text-black" href="#"><i class="fas fa-user-plus me-2"></i> Page2</a>
           </li>
           <li>
-            <a class="dropdown-item text-white" href="#"><i class="fas fa-exclamation-triangle me-2"></i> Page3</a>
+            <a class="dropdown-item text-black" href="#"><i class="fas fa-exclamation-triangle me-2"></i> Page3</a>
           </li>
 
         </ul>
@@ -101,7 +101,7 @@
           <span class="navbar-text me-3">Welcome, Admin</span>
           <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
-        
+
       </div>
     </nav>
     <!-- Page Content -->

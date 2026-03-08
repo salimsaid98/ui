@@ -2,6 +2,7 @@ import { Component, ViewChild, AfterViewInit, HostListener, TemplateRef } from '
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
+import { ProductServiceService } from 'src/app/service/product/product-service.service';
 
 @Component({
   selector: 'app-product-management',
@@ -14,7 +15,7 @@ export class ProductManagementComponent implements AfterViewInit {
     { id: 2, name: 'Product B', sku: 'SKU002', category: 'Category 2', stock: 50 },
     // ...more products
   ];
-  displayedColumns: string[] = ['id', 'name', 'sku', 'category', 'stock', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'price',];
   dataSource = new MatTableDataSource(this.products);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -22,11 +23,16 @@ export class ProductManagementComponent implements AfterViewInit {
   isSmallScreen = window.innerWidth < 768;
   productData = { name: '', sku: '', category: '', stock: 0 };
   editingProduct: any = null;
+  router: any;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private productService: ProductServiceService) {}
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+
+  }
+  ngOnInit(){
+    this.getProduct();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -73,4 +79,18 @@ export class ProductManagementComponent implements AfterViewInit {
     this.products = this.products.filter(p => p !== product);
     this.dataSource.data = this.products;
   }
+data:any
+  getProduct(){
+    this.productService.getProducts().subscribe(response=>{
+      this.data=response;
+      console.log(this.data)
+    })
+  }
+
+  submit() {
+
+    // Add login logic here
+    this.router.navigate(['/asside']);
+  }
+
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -18,13 +18,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';   
+import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 import { AccountingComponent } from './pages/accounting/accounting.component';
 import { ProductManagementComponent } from './pages/product-management/product-management.component';
-import { StockTrackingComponent } from './pages/stock-tracking/stock-tracking.component'; 
+import { StockTrackingComponent } from './pages/stock-tracking/stock-tracking.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CategoriesComponent } from './pages/categories/categories.component';
@@ -32,6 +32,10 @@ import { SalesComponent } from './pages/sales/sales.component';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { SuppliersComponent } from './pages/suppliers/suppliers.component';
 import { PurchasesComponent } from './pages/purchases/purchases.component';
+import { DevComponent } from './pages/dev/dev.component';
+import { AddproductComponent } from './pages/addproduct/addproduct.component';
+
+// import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,12 @@ import { PurchasesComponent } from './pages/purchases/purchases.component';
     SalesComponent,
     CustomersComponent,
     SuppliersComponent,
-    PurchasesComponent
+    PurchasesComponent,
+    DevComponent,
+    AddproductComponent,
+
+
+    // SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +77,8 @@ import { PurchasesComponent } from './pages/purchases/purchases.component';
       MatButtonModule,
       MatIconModule,
       MatDatepickerModule,
-      MatNativeDateModule
+      MatNativeDateModule,
+       HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

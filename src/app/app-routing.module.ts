@@ -14,6 +14,9 @@ import { SalesComponent } from './pages/sales/sales.component';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { SuppliersComponent } from './pages/suppliers/suppliers.component';
 import { PurchasesComponent } from './pages/purchases/purchases.component';
+import { DevComponent } from './pages/dev/dev.component';
+import { AddproductComponent } from './pages/addproduct/addproduct.component';
+// import { SidenavComponent } from './sidenav/sidenav.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -30,7 +33,9 @@ const routes: Routes = [
     {path: 'sales', component: SalesComponent},
     {path:'customers',component:CustomersComponent},
     {path:'suppliers',component:SuppliersComponent},
-    {path:'purchases',component:PurchasesComponent}
+    {path:'purchases',component:PurchasesComponent},
+    {path: 'dev', component: DevComponent},
+    {path: 'addproduct', component: AddproductComponent},
     // {path: 'settings', component: SettingsComponent},
   ]},
 

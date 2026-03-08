@@ -12,4 +12,10 @@ constructor(private router: Router) { }
   navigateToLogin() {
     this.router.navigate(['/login']);
   }
+
+  submit() {
+    
+    // Add login logic here
+    this.router.navigate(['/asside']);
+  }
 }

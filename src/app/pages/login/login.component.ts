@@ -7,9 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-constructor(private router: Router) { }
+
 
   navigateToRegister() {
     this.router.navigate(['/register']);
+  }
+  constructor(private router: Router) { }
+
+  submit() {
+
+    // Add login logic here
+    this.router.navigate(['/asside']);
   }
 }

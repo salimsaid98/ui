@@ -16,8 +16,8 @@ export class UsersComponent implements AfterViewInit {
   ];
 
   User :any=
-  { username: '', 
-    email: '', 
+  { username: '',
+    email: '',
     role: ''
    }; // For new user input
   displayedColumns: string[] = ['id', 'username', 'email', 'role', 'actions'];
