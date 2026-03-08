@@ -1,0 +1,12 @@
+ .nav-link.text-black:hover, .nav-link.text-white:focus {
+    background-color: #1976d2 !important; /* Blue highlight */
+    color: #fff !important;
+    font-weight: bold;
+    transition: background 0.2s, font-weight 0.2s;
+  }
+  .dropdown-menu .dropdown-item.text-white:hover,
+  .dropdown-menu .dropdown-item.text-white:focus {
+    background-color: #8B5C2A !important; /* Brown highlight for dropdown */
+    color: #fff !important;
+    font-weight: bold;
+  }

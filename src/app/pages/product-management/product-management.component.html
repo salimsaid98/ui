@@ -1,0 +1,30 @@
+<div class="d-flex float-lg-end">
+  <button type="submit" class="btn btn-success" (click)="submit()">
+    <a routerLink="/asside/addproduct" style="text-decoration: none; color: white;font-weight: bolder;">Add product</a>
+  </button>
+</div>
+<div class="table table-bordered pt-3">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Barcode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of data">
+        <td scope="row">{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.category?.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
