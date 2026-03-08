@@ -1,0 +1,50 @@
+<section class="pricing">
+  <div class="container">
+    <h2>{{ 'pricing.title' | translate }}</h2>
+    <div class="cards">
+      <div class="card">
+        <h3><mat-icon>currency_exchange</mat-icon> {{ 'pricing.free.title' | translate }}</h3>
+        <p class="price">{{ 'pricing.free.price' | translate }}</p>
+        <ul>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.free.user' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.free.sales' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.free.expenses' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.free.dashboard' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature5' | translate }}</li><!-- customer management in free? might not make sense but include planning note? -->
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature6' | translate }}</li><!-- invoice -->
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature7' | translate }}</li><!-- all accounting reports -->
+        </ul>
+        <button mat-raised-button color="primary">{{ 'pricing.free.button' | translate }}</button>
+      </div>
+      <div class="card popular">
+        <h3><mat-icon>star</mat-icon> {{ 'pricing.basic.title' | translate }}</h3>
+        <p class="price">{{ 'pricing.basic.price' | translate }}</p>
+        <ul>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature1' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature2' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature3' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature4' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature5' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature6' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.basic.feature7' | translate }}</li>
+        </ul>
+        <button mat-raised-button color="accent">{{ 'pricing.basic.button' | translate }}</button>
+      </div>
+      <div class="card">
+        <h3><mat-icon>workspace_premium</mat-icon> {{ 'pricing.pro.title' | translate }}</h3>
+        <p class="price">{{ 'pricing.pro.price' | translate }}</p>
+        <ul>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.pro.feature1' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.pro.feature2' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.pro.feature3' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.pro.feature4' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.pro.feature5' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.pro.feature6' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.pro.feature7' | translate }}</li>
+          <li><mat-icon>check_circle</mat-icon> {{ 'pricing.pro.feature8' | translate }}</li>
+        </ul>
+        <button mat-raised-button color="primary">{{ 'pricing.pro.button' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</section>

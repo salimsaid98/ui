@@ -1,0 +1,4 @@
+/* global landing styles */
+:host {
+  display:block;
+}

@@ -1,0 +1,13 @@
+.final-cta {
+  padding: 4rem 1rem;
+  background: #16a34a;
+  color: #ffffff;
+  text-align: center;
+}
+.final-cta .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.final-cta h2 {
+  margin-bottom: 1.5rem;
+}

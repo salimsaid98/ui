@@ -1,0 +1,16 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+.spacer {
+  flex: 1 1 auto;
+}

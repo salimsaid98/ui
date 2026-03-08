@@ -1,0 +1,26 @@
+.features {
+  padding: 3rem 1rem;
+  background: #ffffff;
+}
+.features .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.features h2 {
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+.features .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.features .card {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex: 1 1 150px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}

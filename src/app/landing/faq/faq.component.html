@@ -1,0 +1,13 @@
+<section class="faq">
+  <div class="container">
+    <h2>{{ 'faq.title' | translate }}</h2>
+    <div class="item" *ngFor="let faq of faqs; let i = index">
+      <div class="question" (click)="toggle(i)">
+        {{ faq.q | translate }}
+      </div>
+      <div class="answer" *ngIf="faq.open">
+        {{ faq.a | translate }}
+      </div>
+    </div>
+  </div>
+</section>

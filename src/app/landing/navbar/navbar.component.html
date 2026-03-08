@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="navbar">
+  <div class="logo">
+    <img src="assets/logo-placeholder.png" alt="Company logo" />
+    <span class="title">My Company</span>
+  </div>
+  <span class="spacer"></span>
+  <button mat-button (click)="toggleLanguage()">{{ language === 'sw' ? 'EN' : 'SW' }}</button>
+  <button mat-icon-button (click)="toggleTheme()">
+    <mat-icon>{{ isDark ? 'light_mode' : 'dark_mode' }}</mat-icon>
+  </button>
+  <button mat-button routerLink="/signin">{{ 'navbar.signin' | translate }}</button>
+  <button mat-raised-button color="accent" routerLink="/signup">{{ 'navbar.signup' | translate }}</button>
+</mat-toolbar>

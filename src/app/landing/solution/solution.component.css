@@ -1,0 +1,21 @@
+.solution {
+  padding: 3rem 1rem;
+  background: #f9fafb;
+}
+.solution .container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.solution h2 {
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+.solution ul {
+  list-style: none;
+  padding: 0;
+}
+.solution li {
+  margin: 1rem 0;
+  font-size: 1.125rem;
+}
