@@ -1,6 +1,9 @@
 <div class="d-flex float-lg-end">
   <button type="submit" class="btn btn-success" (click)="submit()">
-    <a routerLink="/asside/addproduct" style="text-decoration: none; color: white;font-weight: bolder;">Add product</a>
+    <a routerLink="/asside/addproduct" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  [class.active]="isProductSectionActive()"
+  style="text-decoration: none; color: white;font-weight: bolder;">Add product</a>
   </button>
 </div>
 <div class="table table-bordered pt-3">

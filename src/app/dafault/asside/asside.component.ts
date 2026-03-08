@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-asside',
@@ -6,7 +7,9 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./asside.component.css']
 })
 export class AssideComponent {
-sidebarOpen = window.innerWidth >= 992; // Open by default on large screens
+  sidebarOpen = window.innerWidth >= 992; // Open by default on large screens
+
+  constructor(private router: Router) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -16,7 +19,16 @@ sidebarOpen = window.innerWidth >= 992; // Open by default on large screens
   toggleSidebar() {
     this.sidebarOpen = !this.sidebarOpen;
   }
+
   isDarkTheme = false;
+
+  /**
+   * Return true when either the product-management or addproduct route is active.
+   */
+  isProductSectionActive(): boolean {
+    const url = this.router.url;
+    return url.startsWith('/product-management') || url.startsWith('/asside/addproduct');
+  }
 
 toggleTheme() {
   this.isDarkTheme = !this.isDarkTheme;

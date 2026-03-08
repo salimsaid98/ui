@@ -4,6 +4,14 @@
     font-weight: bold;
     transition: background 0.2s, font-weight 0.2s;
   }
+
+  /* active/selected link styling */
+  .nav-link.active {
+    background-color: #1976d2 !important;
+    color: #fff !important;
+    font-weight: bold;
+  }
+
   .dropdown-menu .dropdown-item.text-white:hover,
   .dropdown-menu .dropdown-item.text-white:focus {
     background-color: #8B5C2A !important; /* Brown highlight for dropdown */

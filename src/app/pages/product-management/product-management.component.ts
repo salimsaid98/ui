@@ -10,6 +10,9 @@ import { ProductServiceService } from 'src/app/service/product/product-service.s
   styleUrls: ['./product-management.component.css']
 })
 export class ProductManagementComponent implements AfterViewInit {
+isProductSectionActive() {
+throw new Error('Method not implemented.');
+}
   products = [
     { id: 1, name: 'Product A', sku: 'SKU001', category: 'Category 1', stock: 100 },
     { id: 2, name: 'Product B', sku: 'SKU002', category: 'Category 2', stock: 50 },
